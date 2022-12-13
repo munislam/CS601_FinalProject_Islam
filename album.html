@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munthasir Islam</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="menu-toggle">
+            <div class="hamburger">
+                <span></span>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <nav class="menu">
+                <a href="index.html" class="menu-item">HOME</a> 
+                <a href="about.html" class="menu-item">ABOUT</a> 
+                <a href="resume.html" class="menu-item">RESUME</a> 
+                <a href="skills.html" class="menu-item">SKILLS</a>
+                <a href="project.html" class="menu-item">PROJECTS</a>
+                <a href="album.html" class="menu-item is-active">ALBUM</a>
+                <a href="review.html" class="menu-item">REVIEWS</a>
+                <a href="contact.html" class="menu-item">CONTACT</a>
+            </nav>
+        </aside>
+        <div class="flex-col">
+            <div class="flex-row">
+                <main class="content">
+                    <section>
+                        <header>
+                            <h1>Album</h1>
+                            <p class="album-description">I like traveling and have traveled to many places. See if you can guess! Hover over a picture to reveal the name of the place.</p>
+                        </header>
+                        <div id="album" class="album-container">
+                            <div class="">
+                                <img
+                                    @mouseover="hover1 = true"
+                                    @mouseleave="hover1 = false"
+                                    v-show="hover1 == false"
+                                    :src="MarylandSrc" 
+                                    class=""
+                                    alt="">
+                                <img
+                                    @mouseover="hover1 = true"
+                                    @mouseleave="hover1 = false"
+                                    v-show="hover1 == true"
+                                    :src="MARevealSrc"
+                                    class=""
+                                    alt="">
+                            </div>
+                            <div class="">
+                                <img
+                                    @mouseover="hover2 = true"
+                                    @mouseleave="hover2 = false"
+                                    v-show="hover2 == false"
+                                    :src="SeatleSrc" 
+                                    class=""
+                                    alt="">
+                                <img
+                                    @mouseover="hover2 = true"
+                                    @mouseleave="hover2 = false"
+                                    v-show="hover2 == true"
+                                    :src="WARevealSrc"
+                                    class=""
+                                    alt="">
+                            </div>
+                            <div class="">
+                                <img
+                                    @mouseover="hover3 = true"
+                                    @mouseleave="hover3 = false"
+                                    v-show="hover3 == false"
+                                    :src="VermontSrc" 
+                                    class=""
+                                    alt="">
+                                <img
+                                    @mouseover="hover3 = true"
+                                    @mouseleave="hover3 = false"
+                                    v-show="hover3 == true"
+                                    :src="VTRevealSrc"
+                                    class=""
+                                    alt="">
+                            </div>
+                            <div class="">
+                                <img
+                                    @mouseover="hover4 = true"
+                                    @mouseleave="hover4 = false"
+                                    v-show="hover4 == false"
+                                    :src="VirginiaSrc" 
+                                    class=""
+                                    alt="">
+                                <img
+                                    @mouseover="hover4 = true"
+                                    @mouseleave="hover4 = false"
+                                    v-show="hover4 == true"
+                                    :src="VARevealSrc"
+                                    class=""
+                                    alt="">
+                            </div>
+                            <div class="">
+                                <img
+                                    @mouseover="hover5 = true"
+                                    @mouseleave="hover5 = false"
+                                    v-show="hover5 == false"
+                                    :src="WestVirginiaSrc" 
+                                    class=""
+                                    alt="">
+                                <img
+                                    @mouseover="hover5 = true"
+                                    @mouseleave="hover5 = false"
+                                    v-show="hover5 == true"
+                                    :src="WVRevealSrc"
+                                    class=""
+                                    alt="">
+                            </div>
+                            <div class="">
+                                <img
+                                    @mouseover="hover6 = true"
+                                    @mouseleave="hover6 = false"
+                                    v-show="hover6 == false"
+                                    :src="PennsylvaniaSrc" 
+                                    class=""
+                                    alt="">
+                                <img 
+                                    @mouseover="hover6 = true"
+                                    @mouseleave="hover6 = false"
+                                    v-show="hover6 == true"
+                                    :src="PARevealSrc"
+                                    class=""
+                                    alt="">
+                            </div>
+                        </div>  
+                    </section>
+                </main>
+            </div>
+            <div class="flex-row">
+                <footer>
+                    <h3>Website made by Munthasir Islam</h3>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/nav.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="assets/js/album.js"></script>
+
+</body>
+</html>

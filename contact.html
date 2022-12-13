@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munthasir Islam</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="menu-toggle">
+            <div class="hamburger">
+                <span></span>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <nav class="menu">
+                <a href="index.html" class="menu-item">HOME</a> 
+                <a href="about.html" class="menu-item">ABOUT</a> 
+                <a href="resume.html" class="menu-item">RESUME</a> 
+                <a href="skills.html" class="menu-item">SKILLS</a>
+                <a href="project.html" class="menu-item">PROJECTS</a>
+                <a href="album.html" class="menu-item">ALBUM</a>
+                <a href="review.html" class="menu-item">REVIEWS</a>
+                <a href="contact.html" class="menu-item is-active">CONTACT</a>
+            </nav>
+        </aside>
+        <div class="flex-col">
+            <div class="flex-row">
+                <main class="content">
+                    <section>
+                        <div class="contact-page-container">
+                        <div class="contact-container">
+                            <h1>Contacts</h1>
+                            <form id="form" method="post" action="/">
+                                <!-- Full Name -->
+                                <div class="">
+                                    <label for="fullname">Full Name</label>
+                                    <input type="text" id="fullname" name="fullname" 
+                                        placeholder="Full Name" required minlength="3" maxlength="100">
+                                </div>
+                                <!-- Email -->
+                                <div class="">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" 
+                                        placeholder="something@email.com" required minlength="1" maxlength="100">
+                                </div>
+                                <!-- Message -->
+                                <div class="">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" 
+                                        placeholder="Send me a message!" required minlength="1" maxlength="200"></textarea>
+                                </div>
+
+                                <!-- Submit the form -->
+                                <div class="submitBtn-container">
+                                    <button type="submit">Submit</button>
+                                </div>
+                            </form>
+                            <!-- Error/Success Message -->
+                            <div class="">
+                                <h3 id="errorMessage"></h3>
+                            </div>
+                        </div>
+                        </div> 
+                    </section>
+                </main>
+            </div>
+            <div class="flex-row">
+                <footer>
+                    <h3>Website made by Munthasir Islam</h3>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/contact.js"></script>
+
+</body>
+</html>

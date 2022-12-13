@@ -1,0 +1,511 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+/* Flex rows and columns */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    max-width: 84vw;
+    flex: 1;
+}
+
+/* Navigation */
+.sidebar {
+    flex: 1 1 0;
+    max-width: 300px;
+    padding: 2rem 1rem;
+    background-color: #2e3047;
+}
+
+.sidebar h3 {
+    color: #b1b4c1;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.sidebar .menu {
+    margin: 0 -1rem;
+}
+
+.sidebar .menu .menu-item {
+    display: block;
+    padding: 1em;
+    color: #FFF;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+.sidebar .menu .menu-item:hover,
+.sidebar .menu .menu-item.is-active {
+    color: #3b7aba;
+    border-right: 5px solid #3b7aba;
+}
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 99px;
+    background-color: #2e3047;
+    cursor: pointer;
+}
+
+.hamburger {
+    position: relative;
+    top: calc(50% - 2px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+}
+
+.hamburger > span,
+.hamburger > span::before,
+.hamburger > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 99px;
+    background-color: #FFF;
+    transition-duration: .25s;
+}
+
+.hamburger > span::before {
+    content: ' ';
+    top: -8px;
+}
+
+.hamburger > span::after {
+    content: ' ';
+    top: 8px;
+}
+
+.menu-toggle.is-active .hamburger > span {
+    transform: rotate(45deg);
+}
+
+.menu-toggle.is-active .hamburger > span::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+
+.menu-toggle.is-active .hamburger > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/* Main */
+.content {
+    flex: 1 1 0;
+    padding: 2vh 2vw;
+}
+
+.content h1 {
+    color: #3c3F58;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.content h2 {
+    color: #3c3F58;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    color: #515565;
+}
+
+/* Home page */
+
+.main-page-container{
+    padding-bottom: 15vh;
+}
+.profile-img {
+    height: 35vh;
+    width: 20vw;
+    margin-left: 25vw;
+    padding-bottom: 5vh;
+}
+
+.social-link-container {
+    padding-bottom: 5vh;
+    margin-left: 24vw;
+}
+
+.linkedin-img {
+    height: 8vh;
+    width: 16vw;
+}
+
+.github-img {
+    height: 8vh;
+    width: 8vw;
+}
+
+/* About */
+
+.about-page-container > article {
+    text-align: center;
+}
+
+.about-page-container > article > p {
+    padding-bottom: 5vh;
+}
+
+.v22img {
+    height: 50vh;
+    width: 50vw;
+}
+
+.geninfo-row-container {
+    clear:both;
+    padding-bottom: 15vh;
+}
+
+.geninfo-col-container{
+    width: 50%;
+    float: left;
+}
+
+li{
+    list-style: none;
+}
+
+li::before{
+    content: "\00BB";
+}
+
+/* Resume */
+
+.resume-dnld-btn {
+    padding-top: 2vh;
+    padding-bottom: 3vh;
+}
+
+.fa-graduation-cap, .fa-briefcase {
+    font-size: 30px;
+}
+
+.font-header {
+    font-size: 1.5rem;
+}
+
+.education {
+    padding-bottom: 5vh;
+}
+
+.work > ul {
+    padding-top: 4vh;
+    padding-left: 3vw;
+}
+
+.work > ul > li {
+    font-size: 1.2rem;
+    padding-bottom: 2vh;
+}
+
+.button {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px;
+
+}
+
+/* Skills */
+.zone {
+    padding:3vh 4vw;
+    margin:10vh 4vw;
+    cursor:pointer;
+    display:block;
+    color:#FFF;
+    font-size:2em;
+    border-radius:4px;
+    /* border:1px solid #bbb; */
+    transition: all 0.3s linear;
+}
+
+/* Grid */
+.grid-wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.box > img {
+    width: 100%;
+}
+
+.box > img:hover {
+    transition: all 1s;
+    transform: scale(1.5);
+}
+
+.box {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+}
+
+/* Projects */
+.projects-container {
+    width: 70vw;
+}
+
+.projects-container > figure{
+    padding-bottom: 5vh;
+}
+
+.projects-container > figure > img {
+    padding-left: 10vw;
+    height: 40vh;
+    width: 60vw;
+}
+
+.projects-container > figure > figcaption > a > i { 
+    width: 3vw;
+}
+
+figcaption {
+    color: #2e3047;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Album */
+.album-description {
+    padding-bottom: 2vw;
+}
+
+.album-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 20px;
+}
+.album-container img{
+    height: 30vh;
+    width: 100%;
+    /* padding-bottom: 2vh; */
+}
+
+/* Reviews */
+.review-container > header > p{
+    padding-bottom: 2vh;
+}
+
+.reviews > div {
+    background: #2e3047;
+    border-radius: 10px;
+    padding: 1vw;
+    margin-bottom: 1vh;
+}
+
+.reviews > div > p {
+    color: #FFF;
+}
+
+.reviews > div > h2 {
+    color: #FFF;
+}
+
+/* Contacts */
+.contact-page-container {
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    background: #2e3047;
+    border-radius: 10px;
+    padding: 1vw;
+    width: 20vw;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-container h1 {
+    color: #FFF;
+}
+
+.contact-container h3 {
+    color: rgb(204, 21, 21);
+}
+
+.contact-container label {
+    color: #FFF;
+    padding-bottom: 1vh;
+}
+
+.contact-container > form > div{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2vh;
+    width: 15vw;
+}
+
+.contact-container > form > input {
+    resize: vertical;
+}
+
+.contact-container > form > div > #message {
+    height: 20vh;
+}
+
+.contact-container > form > submitBtn-container {
+    width: 20vw;
+}
+
+/* Footer */
+footer {
+    bottom: 0px;
+    /* padding-left: 30vw; */
+    text-align: center;
+}
+
+.flex-row > footer {
+    width: 100vw;
+}
+
+footer > h3 {
+    color: #3c3F58;
+    border-bottom: none;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    /* Navigation sidebar */
+    .sidebar {
+        max-width: 200px;
+    }
+
+    /* Home */
+    .profile-img {
+        height: 35vh;
+        width: 70vw;
+        padding-bottom: 5vh;
+        margin-left: 6vw;
+    }
+
+    .social-link-container {
+        margin-left: 10vw;
+    }
+    
+    .linkedin-img {
+        height: 8vh;
+        width: 40vw;
+    }
+    
+    .github-img {
+        height: 8vh;
+        width: 20vw;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navigation */
+    .menu-toggle {
+        display: block;
+    }
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        height: 100vh;
+        width: 100%;
+        max-width: 300px;
+        transition: 0.2s linear;
+    }
+
+    .sidebar.is-active {
+        left: 0;
+    }
+    /* Main */
+    .content {
+        padding-top:8rem;
+    }
+
+    /* Home */
+    .profile-img {
+        height: 35vh;
+        width: 80vw;
+        padding-bottom: 5vh;
+        margin-left: 6vw;
+    }
+
+    .social-link-container {
+        margin-left: 10vw;
+    }
+    
+    .linkedin-img {
+        height: 8vh;
+        width: 40vw;
+    }
+    
+    .github-img {
+        height: 8vh;
+        width: 20vw;
+    }
+
+    /* Projects */
+    .projects-container > figure > img {
+        padding-left: 10vw;
+        height: 40vh;
+        width: 80vw;
+    }
+    
+    .projects-container > figure > figcaption { 
+        width: 90vw;
+    }
+
+    .projects-container > figure > figcaption > a > i { 
+        width: 10vw;
+    }
+
+    /* Contact */
+    .contact-page-container {
+        height: 69vh;
+    }
+
+    .contact-container {
+        width: 80vw;
+    }
+
+    .contact-container > form > div{
+        width: 55vw;
+    }
+
+    /* Footer */
+    .flex-row > footer {
+        padding-left: 12vw;
+    }
+}
