@@ -1,4 +1,4 @@
-const apiURL = "/assets/json/review.json";
+const apiURL = "assets/json/review.json";
 
 function processToFrontEnd (ReviewsList) {
     let div_tag = document.getElementById("reviews");
