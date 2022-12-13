@@ -493,6 +493,7 @@ footer > h3 {
 
     /* Contact */
     .contact-page-container {
+        padding-left: 8vw;
         height: 69vh;
     }
 
