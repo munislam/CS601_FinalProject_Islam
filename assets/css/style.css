@@ -476,6 +476,16 @@ footer > h3 {
         width: 20vw;
     }
 
+    /* About */
+    .geninfo-row-container {
+        padding-bottom: 30vh;
+    }
+
+    .about-page-container > article > img {
+        padding-left: 5vw;
+        width: 90vw;
+    }
+    
     /* Projects */
     .projects-container > figure > img {
         padding-left: 10vw;
